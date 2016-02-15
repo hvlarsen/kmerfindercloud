@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fushamalaik</title>
+<meta charset="utf-8">
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="/static/kmerfinder/css/style.css">
+<link rel="stylesheet" href="/static/kmerfinder/css/slider.css">
+<script src="/static/kmerfinder/js/jquery.js"></script>
+<script src="/static/kmerfinder/js/jquery-migrate-1.1.1.js"></script>
+<script src="/static/kmerfinder/js/superfish.js"></script>
+<script src="/static/kmerfinder/js/jquery.equalheights.js"></script>
+<script src="/static/kmerfinder/js/jquery.easing.1.3.js"></script>
+<script src="/static/kmerfinder/js/tms-0.4.1.js"></script>
+<script>
+$(window).load(function () {
+    $('.slider')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 8000,
+        numStatus: false,
+        banners: true,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+</head>
+<body>
+<header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1><a href="index.html"><img src="/static/polls/images/fushamalaik.png" alt=""></a> </h1>
+      <div class="clear"></div>
+      <div class="menu_block">
+        <nav>
+          <ul class="sf-menu">
+            <li class="current"><a href="{% url 'kmerfinder:index'%}">HOME</a></li>
+            <li class="with_ul"><a href="about.html">SERVICES</a>
+              <ul>
+                <li><a href="{% url 'kmerfinder:detail'%}">KmerFinder</a></li>
+                <li><a href="#">ResFinder</a></li>
+                <li><a href="#">MLST</a></li>
+				<li><a href="#">NDtree</a></li>
+			  </ul>
+            </li>
+            <li><a href="practice.html">RESEARCH</a></li>
+            <li><a href="clients.html">TUTORIAL</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+          </ul>
+        </nav>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</header>
+<form enctype="multipart/form-data" action="/polls/kmerfinder/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
