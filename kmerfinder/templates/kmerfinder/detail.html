@@ -3,7 +3,10 @@
 <head>
 <title>Fushamalaik</title>
 <meta charset="utf-8">
-<link rel="icon" href="images/favicon.ico">
+<!-- Google web fonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet'/>
+<link href="/static/kmerfinder/css/upload.css" rel="stylesheet"/>
+<link rel="icon" href="/static/kmerfinder/images/favicon.ico">
 <link rel="stylesheet" href="/static/kmerfinder/css/style.css">
 <link rel="stylesheet" href="/static/kmerfinder/css/slider.css">
 <script src="/static/kmerfinder/js/jquery.js"></script>
@@ -37,7 +40,7 @@ $(window).load(function () {
 <header>
   <div class="container_12">
     <div class="grid_12">
-      <h1><a href="index.html"><img src="/static/polls/images/fushamalaik.png" alt=""></a> </h1>
+      <h1><a href="index.html"><img src="/static/kmerfinder/images/fushamalaik.png" alt=""></a> </h1>
       <div class="clear"></div>
       <div class="menu_block">
         <nav>
@@ -62,10 +65,27 @@ $(window).load(function () {
     </div>
   </div>
 </header>
-<form enctype="multipart/form-data" action="/polls/kmerfinder/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
+<form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+	<div id="drop">
+		Drop Here
+		<a>Browse</a>
+		<input type="file" name="upl" multiple />
+	</div>
+	<ul>
+	<!-- The file uploads will be shown here -->
+	</ul>
+
 </form>
+<!-- JavaScript Includes -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/static/kmerfinder/js/jquery.knob.js"></script>
+
+<!-- jQuery File Upload Dependencies -->
+<script src="/static/kmerfinder/js/jquery.ui.widget.js"></script>
+<script src="/static/kmerfinder/js/jquery.iframe-transport.js"></script>
+<script src="/static/kmerfinder/js/jquery.fileupload.js"></script>
+
+<!-- Our main JS file -->
+<script src="/static/kmerfinder/js/uploadscript.js"></script>
 </body>
 </html>
