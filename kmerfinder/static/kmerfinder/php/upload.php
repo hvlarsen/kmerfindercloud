@@ -1,4 +1,7 @@
 <?php
+use google\appengine\api\cloud_storage\CloudStorageTools;
+
+$options = [ 'gs_bucket_name' => 'kmerfindercloud.appspot.com' ];
 
 // A list of permitted file extensions
 $allowed = array('png', 'jpg', 'gif','zip');
@@ -11,12 +14,11 @@ if(isset($_FILES['upl']) && $_FILES['upl']['error'] == 0){
 		echo '{"status":"error"}';
 		exit;
 	}
-
-	if(move_uploaded_file($_FILES['upl']['tmp_name'], 'uploads/'.$_FILES['upl']['name'])){
-		echo '{"status":"success"}';
+	else{
+		echo $upload_url;
 		exit;
 	}
 }
-
 echo '{"status":"error"}';
 exit;
+?>
