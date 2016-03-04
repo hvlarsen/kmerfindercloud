@@ -1,5 +1,6 @@
 <?php
-use google\appengine\api\cloud_storage\CloudStorageTools;
+ghgfhffhf
+/*use google\appengine\api\cloud_storage\CloudStorageTools;
 $options = [ 'gs_bucket_name' => 'kmerfindercloud.appspot.com' ];
 $upload_url = CloudStorageTools::createUploadUrl('/upload_handler.php', $options);
 function debug_to_console( $data ) {
@@ -29,5 +30,5 @@ if(isset($_FILES['upl']) && $_FILES['upl']['error'] == 0){
 	}
 }
 echo '{"status":"error"}';
-exit;
+exit;*/
 ?>
