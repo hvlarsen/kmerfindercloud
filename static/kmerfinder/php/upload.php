@@ -1,7 +1,7 @@
 <?php
 use google\appengine\api\cloud_storage\CloudStorageTools;
-
 $options = [ 'gs_bucket_name' => 'kmerfindercloud.appspot.com' ];
+$upload_url = CloudStorageTools::createUploadUrl('/upload_handler.php', $options);
 
 // A list of permitted file extensions
 $allowed = array('png', 'jpg', 'gif','zip');
