@@ -4,6 +4,10 @@
 <title>Fushamalaik</title>
 <meta charset="utf-8">
 <!-- Google web fonts -->
+<!-- JavaScript Includes -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/static/kmerfinder/js/jquery.knob.js"></script>
+
 <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet'/>
 <link href="/static/kmerfinder/css/upload.css" rel="stylesheet"/>
 <link rel="icon" href="/static/kmerfinder/images/favicon.ico">
@@ -67,6 +71,7 @@ $(window).load(function () {
     </div>
   </div>
 </header>
+
 <form id="upload" method="post" action="/static/kmerfinder/php/upload.php" enctype="multipart/form-data">
 	<div id="drop">
 		Drop Here
@@ -78,10 +83,6 @@ $(window).load(function () {
 	</ul>
 
 </form>
-
-<!-- JavaScript Includes -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="/static/kmerfinder/js/jquery.knob.js"></script>
 
 <!-- jQuery File Upload Dependencies -->
 <script src="/static/kmerfinder/js/jquery.ui.widget.js"></script>
