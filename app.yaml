@@ -24,6 +24,8 @@ version: 1
 handlers:
 - url: /static
   static_dir: static
+  application_readable: true
+  mime_type: text/html
 - url: .*
   script: kmerfindercloud.wsgi.application
 
